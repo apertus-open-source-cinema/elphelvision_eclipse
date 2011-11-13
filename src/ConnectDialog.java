@@ -45,6 +45,8 @@ import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
 import net.miginfocom.swing.MigLayout;
 import java.awt.Dimension;
+import javax.swing.BoxLayout;
+import java.awt.BorderLayout;
 
 public class ConnectDialog extends javax.swing.JPanel {
 
@@ -60,23 +62,160 @@ public class ConnectDialog extends javax.swing.JPanel {
 	    java.awt.EventQueue.invokeAndWait(new Runnable() {
 
 		public void run() {
-		    initComponents();
+		    bg = new javax.swing.JPanel();
+		    TitleBackground = new javax.swing.JPanel();
+		    Title = new javax.swing.JLabel();
+		    Image = new javax.swing.JLabel();
+
+		    setBackground(new java.awt.Color(0, 0, 0));
+		    setForeground(new java.awt.Color(255, 255, 255));
+		    setPreferredSize(new java.awt.Dimension(1024, 600));
+
+		    bg.setBackground(new java.awt.Color(0, 0, 0));
+		    bg.setForeground(new java.awt.Color(0, 0, 0));
+		    bg.setPreferredSize(new java.awt.Dimension(1024, 600));
+		    bg.setLayout(new MigLayout("", "[1024px,grow]", "[233.00px][155px][55.00,grow 30,shrink 30][]"));
+
+		    JPanel ConnectPanel = new JPanel();
+		    ConnectPanel.setBackground(Color.BLACK);
+		    bg.add(ConnectPanel, "cell 0 1,alignx center,growy");
+		    ConnectPanel.setLayout(new MigLayout("", "[][][50px][][][]", "[][][][]"));
+		    Camera1IPLabel = new javax.swing.JLabel();
+		    ConnectPanel.add(Camera1IPLabel, "cell 0 0,grow");
+
+		    Camera1IPLabel.setFont(new java.awt.Font("Tahoma", 0, 14));
+		    Camera1IPLabel.setForeground(new java.awt.Color(255, 255, 255));
+		    Camera1IPLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+		    Camera1IPLabel.setText("Camera IP: ");
+		    CameraIP = new javax.swing.JTextField();
+		    CameraIP.setPreferredSize(new Dimension(150, 20));
+		    ConnectPanel.add(CameraIP, "cell 1 0,grow");
+
+		    CameraIP.setText("192.168.0.9");
+		    CameraIP.setMargin(new java.awt.Insets(0, 4, 0, 0));
+		    IP_type = new EButton(Parent);
+		    ConnectPanel.add(IP_type, "cell 2 0,grow");
+
+		    IP_type.setFont(new java.awt.Font("DejaVu Sans", 0, 10));
+		    IP_type.setText("type");
+		    IP_type.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+			    IP_typeMouseClicked(evt);
+			}
+		    });
+		    ConnectButton = new EButton(Parent);
+		    ConnectButton.setSize(new Dimension(80, 35));
+		    ConnectPanel.add(ConnectButton, "cell 3 0 1 2,grow");
+
+		    ConnectButton.setText("Connect");
+		    ConnectButton.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+			    ConnectButtonMouseClicked(evt);
+			}
+		    });
+		    ConnectButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+			    ConnectButtonActionPerformed(evt);
+			}
+		    });
+		    Stereo3DButton = new EButton(Parent);
+		    ConnectPanel.add(Stereo3DButton, "cell 0 1,grow");
+
+		    Stereo3DButton.setBackground(new java.awt.Color(254, 254, 254));
+		    Stereo3DButton.setText("Stereo 3D");
+		    CameraIP2 = new javax.swing.JTextField();
+		    ConnectPanel.add(CameraIP2, "cell 1 1,grow");
+
+		    CameraIP2.setText("192.168.0.9");
+		    CameraIP2.setEnabled(false);
+		    CameraIP2.setMargin(new java.awt.Insets(0, 4, 0, 0));
+		    IP2_type = new EButton(Parent);
+		    ConnectPanel.add(IP2_type, "cell 2 1,grow");
+
+		    IP2_type.setEnabled(false);
+		    IP2_type.setFont(new java.awt.Font("DejaVu Sans", 0, 10));
+		    IP2_type.setText("type");
+		    VLCButton = new EButton(Parent);
+		    VLCButton.setMaximumSize(new Dimension(80, 35));
+		    ConnectPanel.add(VLCButton, "cell 0 3,alignx left,growy");
+
+		    VLCButton.setChecked(true);
+		    VLCButton.setText("VLC");
+		    GstreamerButton = new EButton(Parent);
+		    GstreamerButton.setToolTipText("Gstreamer is still experimental  - DONT USE IT");
+		    ConnectPanel.add(GstreamerButton, "cell 1 3,alignx left,growy");
+
+		    GstreamerButton.setText("Gstreamer");
+		    jLabel1 = new javax.swing.JLabel();
+		    ConnectPanel.add(jLabel1, "cell 2 3 2 1,grow");
+
+		    jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+		    jLabel1.setText("Gstreamer is experimental");
+		    GstreamerButton.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+			    GstreamerButtonMouseClicked(evt);
+			}
+		    });
+		    VLCButton.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+			    VLCButtonMouseClicked(evt);
+			}
+		    });
+		    IP2_type.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+			    IP2_typeMouseClicked(evt);
+			}
+		    });
+		    Stereo3DButton.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+			    Stereo3DButtonMouseClicked(evt);
+			}
+		    });
+		    setLayout(new BorderLayout(0, 0));
+
+		    TitleBackground.setBackground(new java.awt.Color(0, 0, 0));
+
+		    Title.setFont(new java.awt.Font("Tahoma", 0, 14));
+		    Title.setForeground(new java.awt.Color(255, 255, 255));
+		    Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+		    Title.setText("Elphel Vision Alpha  V");
+
+		    Image.setBackground(new java.awt.Color(0, 0, 0));
+		    Image.setFont(new java.awt.Font("Tahoma", 0, 14));
+		    Image.setForeground(new java.awt.Color(255, 255, 255));
+		    Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+		    Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/apertus.png")));
+
+		    bg.add(TitleBackground, "cell 0 0,grow");
 		    bg.setBackground(Parent.Settings.GetPanelBackgroundColor());
 		    TitleBackground.setBackground(Parent.Settings.GetPanelBackgroundColor());
 		    Title.setForeground(Parent.Settings.GetTextColor());
 
 		    Title.setText("Elphel Vision Alpha " + Parent.GetAppVersion());
+		    TitleBackground.setLayout(new MigLayout("", "[979.00px,grow]", "[213px][25px]"));
+		    TitleBackground.add(Image, "cell 0 0,alignx center,aligny center");
+		    TitleBackground.add(Title, "cell 0 1,grow");
+		    Camera1IPLabel.setForeground(Parent.Settings.GetTextColor());
+		    VLCButton.setChecked(true);
+		    VLCButton.setChecked(false);
+		    GstreamerButton.setChecked(false);
+		    GstreamerButton.setChecked(true);
+		    ExitButton = new EButton(Parent);
+		    bg.add(ExitButton, "cell 0 3,alignx right");
+
+		    ExitButton.setForeground(new java.awt.Color(217, 2, 2));
+		    ExitButton.setText("Exit");
+		    add(bg);
+		    ExitButton.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseClicked(java.awt.event.MouseEvent evt) {
+			    ExitButtonMouseClicked(evt);
+			}
+		    });
 		    if (Parent.Settings.GetVideoPlayer() == streamVideoPlayer.VLC) {
 		    }
 		    if (Parent.Settings.GetVideoPlayer() == streamVideoPlayer.GSTREAMER) {
-			Camera1IPLabel.setForeground(Parent.Settings.GetTextColor());
-			VLCButton.setChecked(true);
-			VLCButton.setChecked(false);
-			GstreamerButton.setChecked(false);
-			GstreamerButton.setChecked(true);
-		    }
 
-		    // WBDaylight.setIconImage(getClass().getClassLoader().getResource("/media/wb_daylight.png"));
+		    }
 
 		    // Title.setText("Elphel Vision Alpha V" +
 		    // Parent.GetAppVersion());
@@ -86,7 +225,6 @@ public class ConnectDialog extends javax.swing.JPanel {
 		    // IntroAnimator.start(); // JOGL is still troublesome so
 		    // disabled for now
 
-		    // BalloonTip test = new BalloonTip(jButton1, "test");
 		}
 	    });
 
@@ -144,165 +282,6 @@ public class ConnectDialog extends javax.swing.JPanel {
 	this.registerKeyboardAction(actionListener, "c focus", up, JComponent.WHEN_IN_FOCUSED_WINDOW);
 	this.requestFocus();
     }
-
-    private void initComponents() {
-
-	bg = new javax.swing.JPanel();
-	TitleBackground = new javax.swing.JPanel();
-	TitleBackground.setBounds(0, 0, 1024, 268);
-	Title = new javax.swing.JLabel();
-	Image = new javax.swing.JLabel();
-	ExitButton = new EButton(Parent);
-	ExitButton.setBounds(932, 553, 80, 35);
-
-	setBackground(new java.awt.Color(0, 0, 0));
-	setForeground(new java.awt.Color(255, 255, 255));
-	setPreferredSize(new java.awt.Dimension(1024, 600));
-
-	bg.setBackground(new java.awt.Color(0, 0, 0));
-	bg.setForeground(new java.awt.Color(0, 0, 0));
-	bg.setPreferredSize(new java.awt.Dimension(1024, 600));
-	bg.setLayout(null);
-
-	JPanel ConnectPanel = new JPanel();
-	ConnectPanel.setBackground(Color.BLACK);
-	ConnectPanel.setBounds(288, 280, 523, 155);
-	bg.add(ConnectPanel);
-	ConnectPanel.setLayout(new MigLayout("", "[][][50px][]", "[][][][]"));
-	Camera1IPLabel = new javax.swing.JLabel();
-	ConnectPanel.add(Camera1IPLabel, "cell 0 0,grow");
-
-	Camera1IPLabel.setFont(new java.awt.Font("Tahoma", 0, 14));
-	Camera1IPLabel.setForeground(new java.awt.Color(255, 255, 255));
-	Camera1IPLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-	Camera1IPLabel.setText("Camera IP: ");
-	CameraIP = new javax.swing.JTextField();
-	CameraIP.setPreferredSize(new Dimension(150, 20));
-	ConnectPanel.add(CameraIP, "cell 1 0,grow");
-
-	CameraIP.setText("192.168.0.9");
-	CameraIP.setMargin(new java.awt.Insets(0, 4, 0, 0));
-	IP_type = new EButton(Parent);
-	ConnectPanel.add(IP_type, "cell 2 0,grow");
-
-	IP_type.setFont(new java.awt.Font("DejaVu Sans", 0, 10));
-	IP_type.setText("type");
-	IP_type.addMouseListener(new java.awt.event.MouseAdapter() {
-	    public void mouseClicked(java.awt.event.MouseEvent evt) {
-		IP_typeMouseClicked(evt);
-	    }
-	});
-	ConnectButton = new EButton(Parent);
-	ConnectButton.setSize(new Dimension(80, 35));
-	ConnectPanel.add(ConnectButton, "cell 3 0 1 2,grow");
-
-	ConnectButton.setText("Connect");
-	ConnectButton.addMouseListener(new java.awt.event.MouseAdapter() {
-	    public void mouseClicked(java.awt.event.MouseEvent evt) {
-		ConnectButtonMouseClicked(evt);
-	    }
-	});
-	ConnectButton.addActionListener(new java.awt.event.ActionListener() {
-	    public void actionPerformed(java.awt.event.ActionEvent evt) {
-		ConnectButtonActionPerformed(evt);
-	    }
-	});
-	Stereo3DButton = new EButton(Parent);
-	ConnectPanel.add(Stereo3DButton, "cell 0 1,grow");
-
-	Stereo3DButton.setBackground(new java.awt.Color(254, 254, 254));
-	Stereo3DButton.setText("Stereo 3D");
-	CameraIP2 = new javax.swing.JTextField();
-	ConnectPanel.add(CameraIP2, "cell 1 1,grow");
-
-	CameraIP2.setText("192.168.0.9");
-	CameraIP2.setEnabled(false);
-	CameraIP2.setMargin(new java.awt.Insets(0, 4, 0, 0));
-	IP2_type = new EButton(Parent);
-	ConnectPanel.add(IP2_type, "cell 2 1,grow");
-
-	IP2_type.setEnabled(false);
-	IP2_type.setFont(new java.awt.Font("DejaVu Sans", 0, 10));
-	IP2_type.setText("type");
-	VLCButton = new EButton(Parent);
-	VLCButton.setMaximumSize(new Dimension(80, 35));
-	ConnectPanel.add(VLCButton, "cell 0 3,alignx left,growy");
-
-	VLCButton.setChecked(true);
-	VLCButton.setText("VLC");
-	GstreamerButton = new EButton(Parent);
-	GstreamerButton.setToolTipText("Gstreamer is still experimental  - DONT USE IT");
-	ConnectPanel.add(GstreamerButton, "cell 1 3,alignx left,growy");
-
-	GstreamerButton.setText("Gstreamer");
-	jLabel1 = new javax.swing.JLabel();
-	ConnectPanel.add(jLabel1, "cell 2 3 2 1,grow");
-
-	jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-	jLabel1.setText("Gstreamer is experimental");
-	GstreamerButton.addMouseListener(new java.awt.event.MouseAdapter() {
-	    public void mouseClicked(java.awt.event.MouseEvent evt) {
-		GstreamerButtonMouseClicked(evt);
-	    }
-	});
-	VLCButton.addMouseListener(new java.awt.event.MouseAdapter() {
-	    public void mouseClicked(java.awt.event.MouseEvent evt) {
-		VLCButtonMouseClicked(evt);
-	    }
-	});
-	IP2_type.addMouseListener(new java.awt.event.MouseAdapter() {
-	    public void mouseClicked(java.awt.event.MouseEvent evt) {
-		IP2_typeMouseClicked(evt);
-	    }
-	});
-	Stereo3DButton.addMouseListener(new java.awt.event.MouseAdapter() {
-	    public void mouseClicked(java.awt.event.MouseEvent evt) {
-		Stereo3DButtonMouseClicked(evt);
-	    }
-	});
-
-	TitleBackground.setBackground(new java.awt.Color(0, 0, 0));
-
-	Title.setFont(new java.awt.Font("Tahoma", 0, 14));
-	Title.setForeground(new java.awt.Color(255, 255, 255));
-	Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-	Title.setText("Elphel Vision Alpha  V");
-
-	Image.setBackground(new java.awt.Color(0, 0, 0));
-	Image.setFont(new java.awt.Font("Tahoma", 0, 14));
-	Image.setForeground(new java.awt.Color(255, 255, 255));
-	Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-	Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/apertus.png"))); // NOI18N
-
-	javax.swing.GroupLayout gl_TitleBackground = new javax.swing.GroupLayout(TitleBackground);
-	TitleBackground.setLayout(gl_TitleBackground);
-	gl_TitleBackground.setHorizontalGroup(gl_TitleBackground.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-		.addGroup(gl_TitleBackground.createSequentialGroup().addGap(345, 345, 345).addComponent(Image).addContainerGap(353, Short.MAX_VALUE))
-		.addComponent(Title, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 998, Short.MAX_VALUE));
-	gl_TitleBackground.setVerticalGroup(gl_TitleBackground.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(
-		gl_TitleBackground.createSequentialGroup().addContainerGap().addComponent(Image)
-			.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-			.addComponent(Title, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-			.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
-
-	bg.add(TitleBackground);
-
-	ExitButton.setForeground(new java.awt.Color(217, 2, 2));
-	ExitButton.setText("Exit");
-	ExitButton.addMouseListener(new java.awt.event.MouseAdapter() {
-	    public void mouseClicked(java.awt.event.MouseEvent evt) {
-		ExitButtonMouseClicked(evt);
-	    }
-	});
-	bg.add(ExitButton);
-
-	javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-	this.setLayout(layout);
-	layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(bg,
-		javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
-	layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(bg,
-		javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
-    }// </editor-fold>
 
     private void Stereo3DButtonMouseClicked(java.awt.event.MouseEvent evt) {
 	Stereo3DButton.ToggleChecked();
