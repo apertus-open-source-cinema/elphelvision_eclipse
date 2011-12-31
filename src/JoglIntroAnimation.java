@@ -21,9 +21,16 @@ import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
+*/
 
+public class JoglIntroAnimation {
+    
+}
+/*
 public class JoglIntroAnimation implements GLEventListener {
-
+    
+}
+  
     public void init(GLAutoDrawable drawable) {
         // Use debug pipeline
         // drawable.setGL(new DebugGL(drawable.getGL()));

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse.ant.import?>
+<project default="create_run_jar" name="Create Runnable Jar for Project ElphelVision with Jar-in-Jar Loader">
+	<!--ANT 1.7 is required                                        -->
+	<target name="create_run_jar">
+		<jar destfile="dist/ElphelVision-dist.jar">
+			<manifest>
+				<attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader" />
+				<attribute name="Rsrc-Main-Class" value="ElphelVision" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Rsrc-Class-Path" value="./ balloontip-1.2.1.jar vlcj-1.2.0.jar vlcj-1.1.5.jar gstreamer-java-1.4.jar jna-3.2.7.jar platform-3.2.7.jar forms-1.3.0.jar forms-1.3.0-src.zip miglayout15-swing.jar miglayout-src.zip" />
+			</manifest>
+			<zipfileset src="jar-in-jar-loader.zip" />
+			<fileset dir="bin" />
+			<zipfileset dir="dependencies" includes="balloontip-1.2.1.jar" />
+			<zipfileset dir="dependencies" includes="vlcj-1.2.0.jar" />
+			<zipfileset dir="dependencies" includes="vlcj-1.1.5.jar" />
+			<zipfileset dir="dependencies" includes="gstreamer-java-1.4.jar" />
+			<zipfileset dir="dependencies" includes="jna-3.2.7.jar" />
+			<zipfileset dir="dependencies" includes="platform-3.2.7.jar" />
+			<zipfileset dir="dependencies" includes="forms-1.3.0.jar" />
+			<zipfileset dir="dependencies" includes="forms-1.3.0-src.zip" />
+			<zipfileset dir="dependencies" includes="miglayout15-swing.jar" />
+			<zipfileset dir="dependencies" includes="miglayout-src.zip" />
+		</jar>
+	</target>
+	<target name="create_platform_zips">
+		<zip destfile="release/ElphelVision-Linux.zip">
+			<fileset dir="dist" includes="ElphelVision-dist.jar" />
+			<fileset dir="." includes="default.config" />
+			<fileset dir="." includes="default.style" />
+			<fileset dir="." includes="LICENSE" />
+			<fileset dir="misc" includes="ElphelVision.sh" />
+		</zip>
+		<zip destfile="release/ElphelVision-Windows.zip">
+			<fileset dir="dist" includes="ElphelVision-dist.jar" />
+			<fileset dir="." includes="default.config" />
+			<fileset dir="." includes="default.style" />
+			<fileset dir="." includes="LICENSE" />
+			<fileset dir="misc" includes="ElphelVision.bat" />
+		</zip>
+		<zip destfile="release/ElphelVision-Mac.zip">
+			<fileset dir="dist" includes="ElphelVision-dist.jar" />
+			<fileset dir="." includes="default.config" />
+			<fileset dir="." includes="default.style" />
+			<fileset dir="." includes="LICENSE" />
+			<fileset dir="misc" includes="ElphelVision.sh" />
+		</zip>
+	</target>
+</project>

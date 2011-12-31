@@ -63,7 +63,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
     long winid = 0;
     float ReadCameradataFPS = 0.25f;
     float InfoAreaFPS = 0.25f;
-    float HistogramFPS = 0.25f;
+    float HistogramFPS = 0.25f; 
     float DatarateFPS = 0.25f;
     JPanel CardManager;
     ConnectDialog ConnectCardLayout;
