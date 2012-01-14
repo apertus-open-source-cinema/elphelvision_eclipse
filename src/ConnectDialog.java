@@ -47,6 +47,7 @@ import net.miginfocom.swing.MigLayout;
 import java.awt.Dimension;
 import javax.swing.BoxLayout;
 import java.awt.BorderLayout;
+import javax.swing.JTextField;
 
 public class ConnectDialog extends javax.swing.JPanel {
 
@@ -94,6 +95,10 @@ public class ConnectDialog extends javax.swing.JPanel {
 		    CameraIP.setText("192.168.0.9");
 		    CameraIP.setMargin(new java.awt.Insets(0, 4, 0, 0));
 		    IP_type = new EButton(Parent);
+		    IP_type.addActionListener(new ActionListener() {
+		    	public void actionPerformed(ActionEvent e) {
+		    	}
+		    });
 		    ConnectPanel.add(IP_type, "cell 2 0,grow");
 
 		    IP_type.setFont(new java.awt.Font("DejaVu Sans", 0, 10));
@@ -200,6 +205,21 @@ public class ConnectDialog extends javax.swing.JPanel {
 		    VLCButton.setChecked(false);
 		    GstreamerButton.setChecked(false);
 		    GstreamerButton.setChecked(true);
+		    
+		    btnTest = new EButton();
+		    btnTest.addActionListener(new ActionListener() {
+		    	public void actionPerformed(ActionEvent e) {
+		    	Parent.FloatInputDialog.Load("Test", Float.parseFloat(testtextField.getText()), testtextField, "ConnectCard");
+			CardLayout cl = (CardLayout) (Parent.GetCardManager().getLayout());
+			cl.show(Parent.GetCardManager(), "FloatInputDialog");
+		    	}
+		    });
+		    
+		    testtextField = new JTextField();
+		    bg.add(testtextField, "flowx,cell 0 2");
+		    testtextField.setColumns(10);
+		    btnTest.setText("Test");
+		    bg.add(btnTest, "cell 0 2");
 		    ExitButton = new EButton(Parent);
 		    bg.add(ExitButton, "cell 0 3,alignx right");
 
@@ -423,4 +443,6 @@ public class ConnectDialog extends javax.swing.JPanel {
     private EButton VLCButton;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel jLabel1;
+    private EButton btnTest;
+    private JTextField testtextField;
 }

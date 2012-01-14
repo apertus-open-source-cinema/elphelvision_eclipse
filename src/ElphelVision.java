@@ -1,7 +1,7 @@
 /*! Copyright (C) 2009 Apertus, All Rights Reserved
- *! Author : Apertus Team
- *! Description: Main class of the Elphel Vision viewfinder software for Elphel cameras.
- *! Thanks to Adrian BER and his JJMplayer sources which helped greatly creating this.
+ *! Author : Sebastian Pichelhofer
+ *! Description: Main class of the Apertus ElphelVision viewfinder software for Elphel cameras.
+ *! 
  *!
  *!  This program is free software: you can redistribute it and/or modify
  *!  it under the terms of the GNU General Public License as published by
@@ -63,7 +63,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
     long winid = 0;
     float ReadCameradataFPS = 0.25f;
     float InfoAreaFPS = 0.25f;
-    float HistogramFPS = 0.25f; 
+    float HistogramFPS = 0.25f;
     float DatarateFPS = 0.25f;
     JPanel CardManager;
     ConnectDialog ConnectCardLayout;
@@ -76,7 +76,8 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
     FPSSettings FPSSettingsCardLayout;
     HistogramSettingsDialog HistogramSettingsCardLayout;
     HITSettings HITSettingsCardLayout;
-    NumericalInputPanelFloat NumberPanelFloat;
+    NumericalInputPanelFloat NumberPanelFloat; // TODO REMOVE
+    FloatInputDialog FloatInputDialog;
     NumericalInputPanelInteger NumberPanelInteger;
     NumericalInputPanelIP NumberPanelIP;
     GuidesLayout GuidesPanel;
@@ -433,7 +434,8 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	FPSSettingsCardLayout = new FPSSettings(this);
 	HITSettingsCardLayout = new HITSettings(this);
 	NumberPanelInteger = new NumericalInputPanelInteger(this);
-	NumberPanelFloat = new NumericalInputPanelFloat(this);
+	NumberPanelFloat = new NumericalInputPanelFloat(this); // TODO REMOVE
+	FloatInputDialog = new FloatInputDialog(this);
 	NumberPanelIP = new NumericalInputPanelIP(this);
 	GuidesPanel = new GuidesLayout(this);
 	PlaybackCardLayout = new PlaybackLayout(this);
@@ -449,7 +451,8 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	CardManager.add(FPSSettingsCardLayout, "CustomFPSCard");
 	CardManager.add(HITSettingsCardLayout, "HITSettingsCard");
 	CardManager.add(GuidesPanel, "GuidesCard");
-	CardManager.add(NumberPanelFloat, "NumberpanelFloat");
+	CardManager.add(NumberPanelFloat, "NumberpanelFloat"); // TODO REMOVE
+	CardManager.add(FloatInputDialog, "FloatInputDialog");
 	CardManager.add(NumberPanelIP, "NumberpanelIP");
 	CardManager.add(NumberPanelInteger, "NumberpanelInteger");
 	CardManager.add(PlaybackCardLayout, "PlaybackCard");
