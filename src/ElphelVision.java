@@ -78,7 +78,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
     HITSettings HITSettingsCardLayout;
     FloatInputDialog FloatInputDialog;
     NumericalInputPanelInteger NumberPanelInteger;
-    NumericalInputPanelIP NumberPanelIP;
+    IPInputDialog IPInputDialog;
     GuidesLayout GuidesPanel;
     PlaybackLayout PlaybackCardLayout;
     PhotoSettingsLayout PhotoSettingsCardLayout;
@@ -434,7 +434,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	HITSettingsCardLayout = new HITSettings(this);
 	NumberPanelInteger = new NumericalInputPanelInteger(this);
 	FloatInputDialog = new FloatInputDialog(this);
-	NumberPanelIP = new NumericalInputPanelIP(this);
+	IPInputDialog = new IPInputDialog(this);
 	GuidesPanel = new GuidesLayout(this);
 	PlaybackCardLayout = new PlaybackLayout(this);
 	PhotoSettingsCardLayout = new PhotoSettingsLayout(this);
@@ -450,7 +450,8 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	CardManager.add(HITSettingsCardLayout, "HITSettingsCard");
 	CardManager.add(GuidesPanel, "GuidesCard");
 	CardManager.add(FloatInputDialog, "FloatInputDialog");
-	CardManager.add(NumberPanelIP, "NumberpanelIP");
+	//CardManager.add(NumberPanelIP, "NumberpanelIP");
+	CardManager.add(IPInputDialog, "IPInputDialog");
 	CardManager.add(NumberPanelInteger, "NumberpanelInteger");
 	CardManager.add(PlaybackCardLayout, "PlaybackCard");
 	CardManager.add(PhotoSettingsCardLayout, "PhotoSettings");

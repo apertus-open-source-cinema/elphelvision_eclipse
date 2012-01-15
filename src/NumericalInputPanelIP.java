@@ -21,6 +21,8 @@ import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.text.Caret;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class NumericalInputPanelIP extends javax.swing.JPanel {
 
@@ -75,6 +77,10 @@ public class NumericalInputPanelIP extends javax.swing.JPanel {
         bg = new javax.swing.JPanel();
         Keypad = new javax.swing.JPanel();
         Number1 = new EButton(Parent);
+        Number1.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        	}
+        });
         Number2 = new EButton(Parent);
         Number3 = new EButton(Parent);
         Number4 = new EButton(Parent);
@@ -275,83 +281,83 @@ public class NumericalInputPanelIP extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout KeypadLayout = new javax.swing.GroupLayout(Keypad);
-        Keypad.setLayout(KeypadLayout);
-        KeypadLayout.setHorizontalGroup(
-            KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KeypadLayout.createSequentialGroup()
-                .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(KeypadLayout.createSequentialGroup()
+        javax.swing.GroupLayout gl_Keypad = new javax.swing.GroupLayout(Keypad);
+        Keypad.setLayout(gl_Keypad);
+        gl_Keypad.setHorizontalGroup(
+            gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gl_Keypad.createSequentialGroup()
+                .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(gl_Keypad.createSequentialGroup()
                             .addComponent(Number1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(Number2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(Number3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(KeypadLayout.createSequentialGroup()
+                        .addGroup(gl_Keypad.createSequentialGroup()
                             .addComponent(Number4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(Number5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(Number6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(KeypadLayout.createSequentialGroup()
-                        .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(gl_Keypad.createSequentialGroup()
+                        .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Number0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(KeypadLayout.createSequentialGroup()
+                            .addGroup(gl_Keypad.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(Number7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
-                        .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(KeypadLayout.createSequentialGroup()
+                        .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(gl_Keypad.createSequentialGroup()
                                 .addComponent(Number8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(Number9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(NumberClear1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(NumberMinus10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(KeypadLayout.createSequentialGroup()
-                        .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(gl_Keypad.createSequentialGroup()
+                        .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(NumberPlusOne, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(NumberPlusTen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(NumberMinusOne, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(74, 74, 74)
-                        .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(NumberClear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(DelButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BackspaceButton, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))))
                 .addContainerGap())
         );
-        KeypadLayout.setVerticalGroup(
-            KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KeypadLayout.createSequentialGroup()
+        gl_Keypad.setVerticalGroup(
+            gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gl_Keypad.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(KeypadLayout.createSequentialGroup()
+                .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(gl_Keypad.createSequentialGroup()
                         .addComponent(BackspaceButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(DelButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(KeypadLayout.createSequentialGroup()
-                        .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(gl_Keypad.createSequentialGroup()
+                        .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Number2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Number3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Number1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(NumberPlusTen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Number5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Number6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Number4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(NumberPlusOne, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Number8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Number9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NumberMinusOne, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Number7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NumberClear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(KeypadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(gl_Keypad.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Number0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NumberMinus10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NumberClear1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -498,17 +504,17 @@ public class NumericalInputPanelIP extends javax.swing.JPanel {
         VarName3.setVerifyInputWhenFocusTarget(false);
         VarName3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        javax.swing.GroupLayout NumberPanelLayout = new javax.swing.GroupLayout(NumberPanel);
-        NumberPanel.setLayout(NumberPanelLayout);
-        NumberPanelLayout.setHorizontalGroup(
-            NumberPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NumberPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout gl_NumberPanel = new javax.swing.GroupLayout(NumberPanel);
+        NumberPanel.setLayout(gl_NumberPanel);
+        gl_NumberPanel.setHorizontalGroup(
+            gl_NumberPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gl_NumberPanel.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(NumberPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(gl_NumberPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(VarName)
-                    .addGroup(NumberPanelLayout.createSequentialGroup()
-                        .addGroup(NumberPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, NumberPanelLayout.createSequentialGroup()
+                    .addGroup(gl_NumberPanel.createSequentialGroup()
+                        .addGroup(gl_NumberPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, gl_NumberPanel.createSequentialGroup()
                                 .addComponent(NumberField1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(VarName1)
@@ -517,7 +523,7 @@ public class NumericalInputPanelIP extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(VarName2)
                                 .addGap(2, 2, 2))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, NumberPanelLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, gl_NumberPanel.createSequentialGroup()
                                 .addComponent(LeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(RightButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -529,24 +535,24 @@ public class NumericalInputPanelIP extends javax.swing.JPanel {
                         .addComponent(NumberField4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(177, Short.MAX_VALUE))
         );
-        NumberPanelLayout.setVerticalGroup(
-            NumberPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NumberPanelLayout.createSequentialGroup()
+        gl_NumberPanel.setVerticalGroup(
+            gl_NumberPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gl_NumberPanel.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(NumberPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(gl_NumberPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(NumberField4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(VarName3)
-                    .addGroup(NumberPanelLayout.createSequentialGroup()
+                    .addGroup(gl_NumberPanel.createSequentialGroup()
                         .addComponent(VarName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                        .addGroup(NumberPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(gl_NumberPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(NumberField1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(NumberField2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(NumberField3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(VarName1)
                     .addComponent(VarName2))
                 .addGap(18, 18, 18)
-                .addGroup(NumberPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(gl_NumberPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LeftButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RightButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
@@ -569,49 +575,49 @@ public class NumericalInputPanelIP extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout ConfirmationPanelLayout = new javax.swing.GroupLayout(ConfirmationPanel);
-        ConfirmationPanel.setLayout(ConfirmationPanelLayout);
-        ConfirmationPanelLayout.setHorizontalGroup(
-            ConfirmationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ConfirmationPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout gl_ConfirmationPanel = new javax.swing.GroupLayout(ConfirmationPanel);
+        ConfirmationPanel.setLayout(gl_ConfirmationPanel);
+        gl_ConfirmationPanel.setHorizontalGroup(
+            gl_ConfirmationPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gl_ConfirmationPanel.createSequentialGroup()
                 .addComponent(SettingsOKButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(SettingsCancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        ConfirmationPanelLayout.setVerticalGroup(
-            ConfirmationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ConfirmationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        gl_ConfirmationPanel.setVerticalGroup(
+            gl_ConfirmationPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gl_ConfirmationPanel.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(SettingsOKButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(SettingsCancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
-        bg.setLayout(bgLayout);
-        bgLayout.setHorizontalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgLayout.createSequentialGroup()
+        javax.swing.GroupLayout gl_bg = new javax.swing.GroupLayout(bg);
+        bg.setLayout(gl_bg);
+        gl_bg.setHorizontalGroup(
+            gl_bg.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gl_bg.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(NumberPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Validation, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(172, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gl_bg.createSequentialGroup()
                 .addContainerGap(840, Short.MAX_VALUE)
                 .addComponent(ConfirmationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(bgLayout.createSequentialGroup()
+            .addGroup(gl_bg.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Keypad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(339, Short.MAX_VALUE))
         );
-        bgLayout.setVerticalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgLayout.createSequentialGroup()
-                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(bgLayout.createSequentialGroup()
+        gl_bg.setVerticalGroup(
+            gl_bg.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(gl_bg.createSequentialGroup()
+                .addGroup(gl_bg.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(gl_bg.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(NumberPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(bgLayout.createSequentialGroup()
+                    .addGroup(gl_bg.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(Validation, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

@@ -97,6 +97,7 @@ public class ConnectDialog extends javax.swing.JPanel {
 		    IP_type = new EButton(Parent);
 		    IP_type.addActionListener(new ActionListener() {
 		    	public void actionPerformed(ActionEvent e) {
+		    	    
 		    	}
 		    });
 		    ConnectPanel.add(IP_type, "cell 2 0,grow");
@@ -205,21 +206,6 @@ public class ConnectDialog extends javax.swing.JPanel {
 		    VLCButton.setChecked(false);
 		    GstreamerButton.setChecked(false);
 		    GstreamerButton.setChecked(true);
-		    
-		    btnTest = new EButton();
-		    btnTest.addActionListener(new ActionListener() {
-		    	public void actionPerformed(ActionEvent e) {
-		    	Parent.FloatInputDialog.Load("Test", Float.parseFloat(testtextField.getText()), testtextField, "ConnectCard");
-			CardLayout cl = (CardLayout) (Parent.GetCardManager().getLayout());
-			cl.show(Parent.GetCardManager(), "FloatInputDialog");
-		    	}
-		    });
-		    
-		    testtextField = new JTextField();
-		    bg.add(testtextField, "flowx,cell 0 2");
-		    testtextField.setColumns(10);
-		    btnTest.setText("Test");
-		    bg.add(btnTest, "cell 0 2");
 		    ExitButton = new EButton(Parent);
 		    bg.add(ExitButton, "cell 0 3,alignx right");
 
@@ -316,9 +302,9 @@ public class ConnectDialog extends javax.swing.JPanel {
     }
 
     private void IP_typeMouseClicked(java.awt.event.MouseEvent evt) {
-	Parent.NumberPanelIP.Load("Camera IP", CameraIP.getText(), CameraIP, "ConnectCard");
+	Parent.IPInputDialog.Load("Camera IP", CameraIP.getText(), CameraIP, "ConnectCard");
 	CardLayout cl = (CardLayout) (Parent.GetCardManager().getLayout());
-	cl.show(Parent.GetCardManager(), "NumberpanelIP");
+	cl.show(Parent.GetCardManager(), "IPInputDialog");
     }
 
     boolean Fake3D = false; // for debugging 3D settings with a single camera
@@ -415,9 +401,9 @@ public class ConnectDialog extends javax.swing.JPanel {
     }
 
     private void IP2_typeMouseClicked(java.awt.event.MouseEvent evt) {
-	Parent.NumberPanelIP.Load("Camera 2 IP", CameraIP2.getText(), CameraIP2, "ConnectCard");
+	Parent.IPInputDialog.Load("Camera 2 IP", CameraIP2.getText(), CameraIP2, "ConnectCard");
 	CardLayout cl = (CardLayout) (Parent.GetCardManager().getLayout());
-	cl.show(Parent.GetCardManager(), "NumberpanelIP");
+	cl.show(Parent.GetCardManager(), "IPInputDialog");
     }
 
     private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {
@@ -443,6 +429,4 @@ public class ConnectDialog extends javax.swing.JPanel {
     private EButton VLCButton;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel jLabel1;
-    private EButton btnTest;
-    private JTextField testtextField;
 }

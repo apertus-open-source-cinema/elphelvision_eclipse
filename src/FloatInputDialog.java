@@ -47,7 +47,6 @@ public class FloatInputDialog extends javax.swing.JPanel {
 
     public FloatInputDialog(ElphelVision parent) {
     	setBackground(Color.BLACK);
-	this.Parent = parent;
 	setPreferredSize(new Dimension(1024, 600));
 	setMinimumSize(new Dimension(1024, 600));
 	this.Parent = parent;
