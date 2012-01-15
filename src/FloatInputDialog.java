@@ -36,15 +36,17 @@ import java.awt.event.ActionEvent;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import javax.swing.SwingConstants;
 
 public class FloatInputDialog extends javax.swing.JPanel {
-    JTextField FieldParent;
-    String TargetCard;
-    ElphelVision Parent;
-    private String VarName;
+    private JTextField FieldParent;
+    private String TargetCard;
+    private ElphelVision Parent;
     private JTextField NumberField;
+    private JLabel VarNameLabel;
 
     public FloatInputDialog(ElphelVision parent) {
+    	setBackground(Color.BLACK);
 	this.Parent = parent;
 	setPreferredSize(new Dimension(1024, 600));
 	setMinimumSize(new Dimension(1024, 600));
@@ -63,25 +65,33 @@ public class FloatInputDialog extends javax.swing.JPanel {
 
 	JPanel NumberPanel = new JPanel();
 	GridBagConstraints gbc_NumberPanel = new GridBagConstraints();
-	gbc_NumberPanel.insets = new Insets(0, 0, 5, 0);
-	gbc_NumberPanel.fill = GridBagConstraints.BOTH;
+	gbc_NumberPanel.anchor = GridBagConstraints.NORTHWEST;
+	gbc_NumberPanel.insets = new Insets(15, 15, 15, 15);
 	gbc_NumberPanel.gridx = 0;
 	gbc_NumberPanel.gridy = 0;
 	bg.add(NumberPanel, gbc_NumberPanel);
 	NumberPanel.setBackground(Color.BLACK);
-	NumberPanel.setLayout(new MigLayout("", "[70px][][][80px]", "[43.00][pref!]"));
+	NumberPanel.setLayout(new MigLayout("", "[110px,grow,center][110px,grow,center][110px,grow,center][110px,grow,center]", "[70px,grow,center][70px,grow,center][54.00px,grow,center]"));
 
-	JLabel lblNewLabel = new JLabel("New label");
-	NumberPanel.add(lblNewLabel, "cell 0 0,alignx left,aligny center");
+	this.VarNameLabel = new JLabel("New label");
+	VarNameLabel.setForeground(Color.WHITE);
+	NumberPanel.add(this.VarNameLabel, "cell 0 0 4 1,growx,aligny center");
 
 	NumberField = new JTextField();
-	NumberPanel.add(NumberField, "cell 1 0 3 1,alignx left,aligny center");
+	NumberField.setFont(new Font("DejaVu Sans", Font.PLAIN, 18));
+	NumberField.setForeground(Color.WHITE);
+	NumberField.setCaretColor(Color.WHITE);
+	NumberField.setHorizontalAlignment(SwingConstants.LEFT);
+	NumberField.setMinimumSize(new Dimension(200, 20));
+	NumberField.setMargin(new Insets(5, 5, 5, 5));
+	NumberField.setBackground(Color.BLACK);
+	NumberPanel.add(NumberField, "cell 0 1 4 1,growx,aligny center");
 	NumberField.setColumns(10);
 
 	EButton ButtonPos1 = new EButton(Parent);
 	ButtonPos1.setPreferredSize(new Dimension(100, 60));
 	ButtonPos1.setFont(new java.awt.Font("DejaVu Sans", 0, 18));
-	NumberPanel.add(ButtonPos1, "cell 0 1,alignx left,aligny top");
+	NumberPanel.add(ButtonPos1, "cell 0 2,alignx left,aligny top");
 	ButtonPos1.setText("Pos1");
 	ButtonPos1.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
@@ -93,7 +103,7 @@ public class FloatInputDialog extends javax.swing.JPanel {
 	EButton ButtonLeft = new EButton(Parent);
 	ButtonLeft.setPreferredSize(new Dimension(100, 60));
 	ButtonLeft.setFont(new java.awt.Font("DejaVu Sans", 0, 18));
-	NumberPanel.add(ButtonLeft, "cell 1 1,alignx left,aligny top");
+	NumberPanel.add(ButtonLeft, "cell 1 2,alignx left,aligny top");
 	ButtonLeft.setText("<-");
 	ButtonLeft.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
@@ -111,7 +121,7 @@ public class FloatInputDialog extends javax.swing.JPanel {
 	});
 	ButtonRight.setPreferredSize(new Dimension(100, 60));
 	ButtonRight.setFont(new java.awt.Font("DejaVu Sans", 0, 18));
-	NumberPanel.add(ButtonRight, "cell 2 1,alignx left,aligny top");
+	NumberPanel.add(ButtonRight, "cell 2 2,alignx left,aligny top");
 	ButtonRight.setText("->");
 
 	EButton ButtonEnd = new EButton(Parent);
@@ -124,15 +134,18 @@ public class FloatInputDialog extends javax.swing.JPanel {
 	    }
 	});
 	ButtonEnd.setText("End");
-	NumberPanel.add(ButtonEnd, "cell 3 1");
+	NumberPanel.add(ButtonEnd, "cell 3 2");
 
 	JPanel KeyPad = new JPanel();
 	GridBagConstraints gbc_KeyPad = new GridBagConstraints();
+	gbc_KeyPad.anchor = GridBagConstraints.NORTHWEST;
+	gbc_KeyPad.ipadx = 10;
+	gbc_KeyPad.insets = new Insets(10, 10, 10, 10);
 	gbc_KeyPad.gridx = 0;
 	gbc_KeyPad.gridy = 1;
 	bg.add(KeyPad, gbc_KeyPad);
 	KeyPad.setBackground(Color.BLACK);
-	KeyPad.setLayout(new MigLayout("", "[][][][][]", "[][][][]"));
+	KeyPad.setLayout(new MigLayout("", "[110px,grow,center][110px,grow,center][110px,grow,center][110px,grow,center][110px,grow,center]", "[70px,grow,center][70px,grow,center][70px,grow,center][70px,grow,center]"));
 
 	EButton KeyPad1 = new EButton(Parent);
 	KeyPad1.addActionListener(new ActionListener() {
@@ -390,22 +403,11 @@ public class FloatInputDialog extends javax.swing.JPanel {
 	});
 	btnCancel.setText("Cancel");
 	ConfirmationPanel.add(btnCancel);
-
-	try {
-	    java.awt.EventQueue.invokeAndWait(new Runnable() {
-
-		public void run() {
-		    initComponents();
-		}
-	    });
-	} catch (Exception ex) {
-	    ex.printStackTrace();
-	}
     }
 
     public void Load(String Varname, float value, JTextField parent, String targetCard) {
 	this.FieldParent = parent;
-	// this.VarName.setText(Varname);
+	this.VarNameLabel.setText(Varname);
 	this.TargetCard = targetCard;
 	this.NumberField.setText(String.valueOf(value));
 	NumberField.getCaret().setVisible(true);
@@ -424,16 +426,4 @@ public class FloatInputDialog extends javax.swing.JPanel {
 						       // position again
 	NumberField.getCaret().setVisible(true);
     }
-
-    private void initComponents() {
-
-	/*
-	 * bg = new javax.swing.JPanel(); Keypad = new javax.swing.JPanel();
-	 * NumberPanel = new javax.swing.JPanel(); Validation = new
-	 * javax.swing.JLabel(); ConfirmationPanel = new javax.swing.JPanel();
-	 * SettingsCancelButton = new EButton(Parent); SettingsOKButton = new
-	 * EButton(Parent);
-	 */
-    }
-
 }
