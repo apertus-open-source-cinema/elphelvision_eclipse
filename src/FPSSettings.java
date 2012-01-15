@@ -442,9 +442,9 @@ public class FPSSettings extends javax.swing.JPanel {
     }//GEN-LAST:event_SkipFramesFieldCaretUpdate
 
     private void FPSTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FPSTypeActionPerformed
-        Parent.NumberPanelFloat.Load("FPS", Float.parseFloat(FPSField.getText()), FPSField, "CustomFPSCard");
+        Parent.FloatInputDialog.Load("FPS", Float.parseFloat(FPSField.getText()), FPSField, "CustomFPSCard");
         CardLayout cl = (CardLayout) (Parent.GetCardManager().getLayout());
-        cl.show(Parent.GetCardManager(), "NumberpanelFloat");
+        cl.show(Parent.GetCardManager(), "FloatInputDialog");
 }//GEN-LAST:event_FPSTypeActionPerformed
 
     private void FPSFieldCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_FPSFieldCaretUpdate

@@ -91,9 +91,9 @@ public class ETextField extends JTextField implements java.io.Serializable, Focu
     }
 
     private void OpenOnScreenKeyboard() {
-        Parent.NumberPanelFloat.Load("FPS", 1, this, "Text");
+        Parent.FloatInputDialog.Load("FPS", 1, this, "Text");
         CardLayout cl = (CardLayout) (Parent.GetCardManager().getLayout());
-        cl.show(Parent.GetCardManager(), "NumberpanelFloat");
+        cl.show(Parent.GetCardManager(), "FloatInputDialog");
     }
 
     public void focusGained(FocusEvent e) {
