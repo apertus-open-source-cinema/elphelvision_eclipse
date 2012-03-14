@@ -461,7 +461,8 @@ public class MainDialogVLC extends JPanel {
 		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton = new EButton(Parent);
 		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
 		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setBackground(new java.awt.Color(255, 255, 255));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/settings.png"))); // NOI18N
+		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setIconImage(getClass().getResource("/media/settings.png")); // NOI18N
+		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setPreferredSize(new Dimension(45, 45));
 		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setToolTipText("Settings");
 		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setAlignmentY(0.0F);
 		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

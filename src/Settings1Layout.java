@@ -685,21 +685,21 @@ public class Settings1Layout extends javax.swing.JPanel implements Runnable {
         ColorModeLabel.setText("Color Mode");
         ColorModeLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        color_rbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/rgb.png"))); // NOI18N
+        color_rbg.setIconImage(getClass().getResource("/media/rgb.png")); // NOI18N
         color_rbg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 color_rbgActionPerformed(evt);
             }
         });
 
-        color_jp4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/jp4.png"))); // NOI18N
+        color_jp4.setIconImage(getClass().getResource("/media/jp4.png")); // NOI18N
         color_jp4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 color_jp4ActionPerformed(evt);
             }
         });
 
-        color_jp46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/jp46.png"))); // NOI18N
+        color_jp46.setIconImage(getClass().getResource("/media/jp46.png")); // NOI18N
         color_jp46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 color_jp46ActionPerformed(evt);
@@ -875,7 +875,7 @@ public class Settings1Layout extends javax.swing.JPanel implements Runnable {
         WBLabel.setText("White Balance");
         WBLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        WBTungsten.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/wb_tungsten.png"))); // NOI18N
+        WBTungsten.setIconImage(getClass().getResource("/media/wb_tungsten.png")); // NOI18N
         WBTungsten.setAlignmentY(0.0F);
         WBTungsten.setHorizontalTextPosition(0);
         WBTungsten.setIconTextGap(20);
@@ -898,7 +898,7 @@ public class Settings1Layout extends javax.swing.JPanel implements Runnable {
         });
 
         WBFlourescent.setBorder(null);
-        WBFlourescent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/wb_flourescent.png"))); // NOI18N
+        WBFlourescent.setIconImage(getClass().getResource("/media/wb_flourescent.png")); // NOI18N
         WBFlourescent.setAlignmentY(0.0F);
         WBFlourescent.setHorizontalTextPosition(0);
         WBFlourescent.setIconTextGap(20);
@@ -920,7 +920,7 @@ public class Settings1Layout extends javax.swing.JPanel implements Runnable {
             }
         });
 
-        WBCloudy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/wb_cloudy.png"))); // NOI18N
+        WBCloudy.setIconImage(getClass().getResource("/media/wb_cloudy.png")); // NOI18N
         WBCloudy.setAlignmentY(0.0F);
         WBCloudy.setHorizontalTextPosition(0);
         WBCloudy.setIconTextGap(20);

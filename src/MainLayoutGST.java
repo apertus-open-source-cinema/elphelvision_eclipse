@@ -253,7 +253,7 @@ public class MainLayoutGST extends JPanel {
         });
 
         SettingsButton.setBackground(new java.awt.Color(255, 255, 255));
-        SettingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/settings.png"))); // NOI18N
+        SettingsButton.setIconImage(getClass().getResource("/media/settings.png")); // NOI18N
         SettingsButton.setToolTipText("Settings");
         SettingsButton.setAlignmentY(0.0F);
         SettingsButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

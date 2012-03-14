@@ -60,7 +60,7 @@ public class ETextField extends JTextField implements java.io.Serializable, Focu
         KeyboardButton.setForeground(new java.awt.Color(217, 2, 2));
         KeyboardButton.setSize(45, 20);
         KeyboardButton.setMargin(new Insets(4, 4, 4, 4));
-        KeyboardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/keyboard.png")));
+        KeyboardButton.setIconImage(getClass().getResource("/media/keyboard.png"));
         KeyboardButton.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +80,7 @@ public class ETextField extends JTextField implements java.io.Serializable, Focu
         KeyboardButton = new EButton();
         KeyboardButton.setForeground(new java.awt.Color(217, 2, 2));
         KeyboardButton.setText("Keyboard");
-        KeyboardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/keyboard.png")));
+        KeyboardButton.setIconImage(getClass().getResource("/media/keyboard.png"));
         KeyboardButton.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(java.awt.event.ActionEvent evt) {
