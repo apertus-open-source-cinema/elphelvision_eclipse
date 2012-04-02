@@ -37,7 +37,7 @@ public class VLCPlayer {
     private MediaPlayerFactory mediaPlayerFactory;
     private ElphelVision Parent;
     private FullScreenStrategy fullScreenStrategy;
-    private CanvasVideoSurface OverlayElement = null;
+    private Canvas OverlayElement = null;
 
     VLCPlayer(ElphelVision parent) {
 	this.Parent = parent;
@@ -56,7 +56,7 @@ public class VLCPlayer {
 	// DefaultFullScreenStrategy(Parent.GetMainframe());
 
 	mediaPlayerFactory = new MediaPlayerFactory(vlcArgs.toArray(new String[vlcArgs.size()]));
-	mediaPlayer = mediaPlayerFactory.newEmbeddedMediaPlayer(fullScreenStrategy);
+	mediaPlayer = mediaPlayerFactory.newMediaPlayer(fullScreenStrategy);
 	// mediaPlayer = mediaPlayerFactory.newMediaPlayer(null);
     }
 
@@ -66,7 +66,7 @@ public class VLCPlayer {
     }
 
     public void SetCanvas(Canvas vlcoverlay) {
-	OverlayElement = mediaPlayerFactory.newVideoSurface(vlcoverlay);
+	//OverlayElement = mediaPlayerFactory.newVideoSurface(vlcoverlay); FIXME
 	mediaPlayer.setVideoSurface(OverlayElement);
     }
 
