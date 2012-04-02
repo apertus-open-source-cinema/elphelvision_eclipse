@@ -100,7 +100,7 @@ public class VLCPlayer {
     }
 
     public void PlayFakeStream() {
-	mediaPlayer.playMedia("fake:// --fake-file novideo.png");
+	mediaPlayer.playMedia("fake:// --fake-file novideo.jpg");
     }
 
     /*
