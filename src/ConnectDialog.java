@@ -197,7 +197,7 @@ public class ConnectDialog extends javax.swing.JPanel {
 		    TitleBackground.setBackground(Parent.Settings.GetPanelBackgroundColor());
 		    Title.setForeground(Parent.Settings.GetTextColor());
 
-		    Title.setText("Elphel Vision Alpha " + Parent.GetAppVersion());
+		    Title.setText("Elphel Vision Alpha " + Parent.getAppVersion());
 		    TitleBackground.setLayout(new MigLayout("", "[979.00px,grow]", "[213px][25px]"));
 		    TitleBackground.add(Image, "cell 0 0,alignx center,aligny center");
 		    TitleBackground.add(Title, "cell 0 1,grow");

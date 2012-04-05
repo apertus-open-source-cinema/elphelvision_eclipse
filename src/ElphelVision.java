@@ -49,7 +49,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	 */
     private static final long serialVersionUID = -8377501235045327984L;
     // private static final long serialVersionUID = 21L;
-    String AppVersion = "0.58";
+    private static final String APP_VERSION = "0.58";
     Camera Camera; // class containing all camera specific information
     UserSettings Settings; // class containing user settings
     VLCPlayer VLCPlayer = null; // VLC Video player class dealing with video
@@ -151,7 +151,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	SetConsoleColor(Color.CYAN);
 	System.out.println(" ElphelVision - Apertus Viewfinder Software");
 	System.out.println(" http://www.apertus.org");
-	System.out.println(" Version: " + this.GetAppVersion());
+	System.out.println(" Version: " + APP_VERSION);
 	SetConsoleColor(Color.WHITE);
 	System.out.println("=====================================================");
 	System.out.println(" ");
@@ -387,8 +387,8 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	return this.CardManager;
     }
 
-    public String GetAppVersion() {
-	return AppVersion;
+    public String getAppVersion() {
+	return APP_VERSION;
     }
 
     public void start() {
