@@ -79,7 +79,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
     FloatInputDialog FloatInputDialog;
     NumericalInputPanelInteger NumberPanelInteger;
     IPInputDialog IPInputDialog;
-    GuidesLayout GuidesPanel;
+    GuidesDialog GuidesPanel;
     PlaybackDialog PlaybackCardLayout;
     PhotoSettingsLayout PhotoSettingsCardLayout;
     static boolean WindowDecorations = false;
@@ -435,7 +435,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	NumberPanelInteger = new NumericalInputPanelInteger(this);
 	FloatInputDialog = new FloatInputDialog(this);
 	IPInputDialog = new IPInputDialog(this);
-	GuidesPanel = new GuidesLayout(this);
+	GuidesPanel = new GuidesDialog(this);
 	PlaybackCardLayout = new PlaybackDialog(this);
 	PhotoSettingsCardLayout = new PhotoSettingsLayout(this);
 
