@@ -79,134 +79,134 @@ public class MainDialogVLC extends JPanel {
 
 		    add(bg);
 		    bg.setLayout(new MigLayout("", "[50.00px][grow][]", "[83px][grow][]"));
-		    
-		    		    SliderPanel = new javax.swing.JPanel();
-		    		    SliderPanel.setMaximumSize(new Dimension(50, 32767));
-		    		    SliderPanel.setSize(new Dimension(50, 300));
-		    		    SliderPanel.setPreferredSize(new Dimension(50, 300));
-		    		    bg.add(SliderPanel, "cell 0 1,alignx left,aligny top");
-		    		    
-		    		    		    SliderPanel.setBackground(new java.awt.Color(0, 0, 0));
-		    		    		    SliderPanel.setLayout(new java.awt.CardLayout());
-		    		    		    GainPanel = new javax.swing.JPanel();
-		    		    		    GainPanel.setMaximumSize(new Dimension(50, 32767));
-		    		    		    SliderPanel.add(GainPanel, "GainPanel");
-		    		    		    twelvedb = new EButton(Parent);
-		    		    		    threedb = new EButton(Parent);
-		    		    		    
-		    		    		    		    GainPanel.setBackground(new java.awt.Color(0, 0, 0));
-		    		    		    		    
-		    		    		    		    		    twelvedb.setText("+12dB");
-		    		    		    		    		    twelvedb.addActionListener(new java.awt.event.ActionListener() {
+
+		    SliderPanel = new javax.swing.JPanel();
+		    SliderPanel.setMaximumSize(new Dimension(50, 32767));
+		    SliderPanel.setSize(new Dimension(50, 300));
+		    SliderPanel.setPreferredSize(new Dimension(50, 300));
+		    bg.add(SliderPanel, "cell 0 1,alignx left,aligny top");
+
+		    SliderPanel.setBackground(new java.awt.Color(0, 0, 0));
+		    SliderPanel.setLayout(new java.awt.CardLayout());
+		    GainPanel = new javax.swing.JPanel();
+		    GainPanel.setMaximumSize(new Dimension(50, 32767));
+		    SliderPanel.add(GainPanel, "GainPanel");
+		    twelvedb = new EButton(Parent);
+		    threedb = new EButton(Parent);
+
+		    GainPanel.setBackground(new java.awt.Color(0, 0, 0));
+
+		    twelvedb.setText("+12dB");
+		    twelvedb.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    twelvedbActionPerformed(evt);
 			}
-		    		    		    		    		    });
-		    		    		    		    		    incvalue1 = new EButton(Parent);
-		    		    		    		    		    
-		    		    		    		    		    		    incvalue1.setText("+");
-		    		    		    		    		    		    incvalue1.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    incvalue1 = new EButton(Parent);
+
+		    incvalue1.setText("+");
+		    incvalue1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    incvalue1ActionPerformed(evt);
 			}
-		    		    		    		    		    		    });
-		    		    		    		    		    		    GainPanel.add(incvalue1);
-		    		    		    		    		    		    GainPanel.add(twelvedb);
-		    		    		    		    		    		    ninedb = new EButton(Parent);
-		    		    		    		    		    		    
-		    		    		    		    		    		    		    ninedb.setText("+9dB");
-		    		    		    		    		    		    		    ninedb.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    GainPanel.add(incvalue1);
+		    GainPanel.add(twelvedb);
+		    ninedb = new EButton(Parent);
+
+		    ninedb.setText("+9dB");
+		    ninedb.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    ninedbActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    GainPanel.add(ninedb);
-		    		    		    		    		    		    		    sixdb = new EButton(Parent);
-		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    sixdb.setText("+6dB");
-		    		    		    		    		    		    		    		    sixdb.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    GainPanel.add(ninedb);
+		    sixdb = new EButton(Parent);
+
+		    sixdb.setText("+6dB");
+		    sixdb.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    sixdbActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    GainPanel.add(sixdb);
-		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    threedb.setText("+3dB");
-		    		    		    		    		    		    		    		    		    threedb.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    GainPanel.add(sixdb);
+
+		    threedb.setText("+3dB");
+		    threedb.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    threedbActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    GainPanel.add(threedb);
-		    		    		    		    		    		    		    		    		    GainPanel.setBackground(Parent.Settings.GetPanelBackgroundColor());
-		    		    		    		    		    		    		    		    		    decvalue1 = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    decvalue1.setText("‒");
-		    		    		    		    		    		    		    		    		    		    decvalue1.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    GainPanel.add(threedb);
+		    GainPanel.setBackground(Parent.Settings.GetPanelBackgroundColor());
+		    decvalue1 = new EButton(Parent);
+
+		    decvalue1.setText("‒");
+		    decvalue1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    decvalue1ActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    zerodb = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    zerodb.setText("0dB");
-		    		    		    		    		    		    		    		    		    		    		    zerodb.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    zerodb = new EButton(Parent);
+
+		    zerodb.setText("0dB");
+		    zerodb.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    zerodbActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    GainPanel.add(zerodb);
-		    		    		    		    		    		    		    		    		    		    		    GainPanel.add(decvalue1);
-		    		    		    		    		    		    		    		    		    		    		    ShutterPanel = new javax.swing.JPanel();
-		    		    		    		    		    		    		    		    		    		    		    ShutterPanel.setMaximumSize(new Dimension(50, 32767));
-		    		    		    		    		    		    		    		    		    		    		    SliderPanel.add(ShutterPanel, "name_7314624474539");
-		    		    		    		    		    		    		    		    		    		    		    incvalue2 = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    incvalue2.setPreferredSize(new Dimension(50, 35));
-		    		    		    		    		    		    		    		    		    		    		    decvalue3 = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    decvalue3.setPreferredSize(new Dimension(50, 35));
-		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    ShutterPanel.setPreferredSize(new java.awt.Dimension(50, 480));
-		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    incvalue2.setText("+");
-		    		    		    		    		    		    		    		    		    		    		    		    		    incvalue2.setAlignmentY(0.0F);
-		    		    		    		    		    		    		    		    		    		    		    		    		    incvalue2.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    GainPanel.add(zerodb);
+		    GainPanel.add(decvalue1);
+		    ShutterPanel = new javax.swing.JPanel();
+		    ShutterPanel.setMaximumSize(new Dimension(50, 32767));
+		    SliderPanel.add(ShutterPanel, "name_7314624474539");
+		    incvalue2 = new EButton(Parent);
+		    incvalue2.setPreferredSize(new Dimension(50, 35));
+		    decvalue3 = new EButton(Parent);
+		    decvalue3.setPreferredSize(new Dimension(50, 35));
+
+		    ShutterPanel.setPreferredSize(new java.awt.Dimension(50, 480));
+
+		    incvalue2.setText("+");
+		    incvalue2.setAlignmentY(0.0F);
+		    incvalue2.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    incvalue2ActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    ShutterPanel.add(incvalue2);
-		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    decvalue3.setText("‒");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    decvalue3.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    ShutterPanel.add(incvalue2);
+
+		    decvalue3.setText("‒");
+		    decvalue3.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    decvalue3ActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    ShutterPanel.add(decvalue3);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    ShutterPanel.setBackground(Parent.Settings.GetPanelBackgroundColor());
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    slowshutter = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    slowshutter.setPreferredSize(new Dimension(50, 35));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    slowshutter.setText("slow\\nshutter");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    slowshutter.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    ShutterPanel.add(decvalue3);
+		    ShutterPanel.setBackground(Parent.Settings.GetPanelBackgroundColor());
+		    slowshutter = new EButton(Parent);
+		    slowshutter.setPreferredSize(new Dimension(50, 35));
+
+		    slowshutter.setText("slow\\nshutter");
+		    slowshutter.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    slowshutterActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ShutterPanel.add(slowshutter);
-		    		    		    		    		    		    		    		    		    		    		    VideoFrame = new javax.swing.JPanel();
-		    		    		    		    		    		    		    		    		    		    		    VideoFrame.setPreferredSize(new Dimension(600, 400));
-		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    VideoFrame.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 100, 100)));
-		    		    		    		    		    		    		    		    		    		    		    		    VideoFrame.setDoubleBuffered(false);
-		    		    		    		    		    		    		    		    		    		    		    		    VideoFrame.setOpaque(false);
-		    		    		    		    		    		    		    		    		    		    		    		    VideoFrame.setLayout(new javax.swing.BoxLayout(VideoFrame, javax.swing.BoxLayout.LINE_AXIS));
-		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    bg.add(VideoFrame, "cell 1 1,grow");
-		    		    		    		    		    		    		    		    		    		    		    		    		    vlcoverlay = new java.awt.Canvas();
-		    		    		    		    		    		    		    		    		    		    		    		    		    vlcoverlay.setPreferredSize(new Dimension(400, 280));
-		    		    		    		    		    		    		    		    		    		    		    		    		    VideoFrame.add(vlcoverlay);
-		    		    		    		    		    		    		    		    		    		    		    		    		    vlcoverlay.setBackground(new java.awt.Color(0, 0, 0));
+		    });
+		    ShutterPanel.add(slowshutter);
+		    VideoFrame = new javax.swing.JPanel();
+		    VideoFrame.setPreferredSize(new Dimension(600, 400));
+
+		    VideoFrame.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(100, 100, 100)));
+		    VideoFrame.setDoubleBuffered(false);
+		    VideoFrame.setOpaque(false);
+		    VideoFrame.setLayout(new javax.swing.BoxLayout(VideoFrame, javax.swing.BoxLayout.LINE_AXIS));
+
+		    bg.add(VideoFrame, "cell 1 1,grow");
+		    vlcoverlay = new java.awt.Canvas();
+		    vlcoverlay.setPreferredSize(new Dimension(400, 280));
+		    VideoFrame.add(vlcoverlay);
+		    vlcoverlay.setBackground(new java.awt.Color(0, 0, 0));
 		    QuickPanel = new javax.swing.JPanel();
 		    QuickPanel.setMinimumSize(new Dimension(80, 430));
 		    QuickPanel.setPreferredSize(new Dimension(80, 430));
@@ -218,120 +218,120 @@ public class MainDialogVLC extends JPanel {
 		    eButton9 = new EButton(Parent);
 		    DatarateMonitor = new DatarateMonitor();
 		    LiveVideoButton = new EButton(Parent);
-		    
-		    		    QuickPanel.setBackground(new java.awt.Color(0, 0, 0));
-		    		    
-		    		    		    eButton3.setText("fit");
-		    		    		    eButton3.addActionListener(new java.awt.event.ActionListener() {
+
+		    QuickPanel.setBackground(new java.awt.Color(0, 0, 0));
+
+		    eButton3.setText("fit");
+		    eButton3.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    eButton3ActionPerformed(evt);
 			}
-		    		    		    });
-		    		    		    
-		    		    		    		    eButton4.setText("1:1");
-		    		    		    		    eButton4.addActionListener(new java.awt.event.ActionListener() {
+		    });
+
+		    eButton4.setText("1:1");
+		    eButton4.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    eButton4ActionPerformed(evt);
 			}
-		    		    		    		    });
-		    		    		    		    
-		    		    		    		    		    eButton6.setText("RGB");
-		    		    		    		    		    eButton6.setToolTipText("RGB 24bit color mode");
-		    		    		    		    		    eButton6.addActionListener(new java.awt.event.ActionListener() {
+		    });
+
+		    eButton6.setText("RGB");
+		    eButton6.setToolTipText("RGB 24bit color mode");
+		    eButton6.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    eButton6ActionPerformed(evt);
 			}
-		    		    		    		    		    });
-		    		    		    		    		    
-		    		    		    		    		    		    eButton8.setText("JP46 RAW");
-		    		    		    		    		    		    eButton8.addActionListener(new java.awt.event.ActionListener() {
+		    });
+
+		    eButton8.setText("JP46 RAW");
+		    eButton8.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    eButton8ActionPerformed(evt);
 			}
-		    		    		    		    		    		    });
-		    		    		    		    		    		    
-		    		    		    		    		    		    		    eButton9.setText("JP4 RAW");
-		    		    		    		    		    		    		    eButton9.addActionListener(new java.awt.event.ActionListener() {
+		    });
+
+		    eButton9.setText("JP4 RAW");
+		    eButton9.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    eButton9ActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    DatarateMonitor.setBackground(new java.awt.Color(0, 0, 0));
-		    		    		    		    		    		    		    		    DatarateMonitor.setPreferredSize(new java.awt.Dimension(90, 40));
-		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    javax.swing.GroupLayout gl_DatarateMonitor = new javax.swing.GroupLayout(DatarateMonitor);
-		    		    		    		    		    		    		    		    		    DatarateMonitor.setLayout(gl_DatarateMonitor);
-		    		    		    		    		    		    		    		    		    gl_DatarateMonitor.setHorizontalGroup(gl_DatarateMonitor.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0,
+		    });
+
+		    DatarateMonitor.setBackground(new java.awt.Color(0, 0, 0));
+		    DatarateMonitor.setPreferredSize(new java.awt.Dimension(90, 40));
+
+		    javax.swing.GroupLayout gl_DatarateMonitor = new javax.swing.GroupLayout(DatarateMonitor);
+		    DatarateMonitor.setLayout(gl_DatarateMonitor);
+		    gl_DatarateMonitor.setHorizontalGroup(gl_DatarateMonitor.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0,
 			    90, Short.MAX_VALUE));
-		    		    		    		    		    		    		    		    		    gl_DatarateMonitor.setVerticalGroup(gl_DatarateMonitor.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0,
+		    gl_DatarateMonitor.setVerticalGroup(gl_DatarateMonitor.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0,
 			    40, Short.MAX_VALUE));
-		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    LiveVideoButton.setText("Camera 1");
-		    		    		    		    		    		    		    		    		    		    LiveVideoButton.addActionListener(new java.awt.event.ActionListener() {
+
+		    LiveVideoButton.setText("Camera 1");
+		    LiveVideoButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    LiveVideoButtonActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    bg.add(QuickPanel, "cell 2 1,alignx left,aligny center");
-		    		    		    		    		    		    		    		    		    		    		    QuickPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		    		    		    		    		    		    		    		    		    		    		    ScaleLabel = new javax.swing.JLabel();
-		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    ScaleLabel.setFont(new java.awt.Font("DejaVu Sans", 0, 12));
-		    		    		    		    		    		    		    		    		    		    		    		    ScaleLabel.setForeground(new java.awt.Color(255, 255, 255));
-		    		    		    		    		    		    		    		    		    		    		    		    ScaleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		    		    		    		    		    		    		    		    		    		    		    		    ScaleLabel.setText("Scaling");
-		    		    		    		    		    		    		    		    		    		    		    		    ScaleLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(ScaleLabel);
-		    		    		    		    		    		    		    		    		    		    		    		    eButton1 = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    eButton1.setText("2:1");
-		    		    		    		    		    		    		    		    		    		    		    		    		    eButton1.addActionListener(new java.awt.event.ActionListener() {
+		    });
+
+		    bg.add(QuickPanel, "cell 2 1,alignx left,aligny center");
+		    QuickPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		    ScaleLabel = new javax.swing.JLabel();
+
+		    ScaleLabel.setFont(new java.awt.Font("DejaVu Sans", 0, 12));
+		    ScaleLabel.setForeground(new java.awt.Color(255, 255, 255));
+		    ScaleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+		    ScaleLabel.setText("Scaling");
+		    ScaleLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		    QuickPanel.add(ScaleLabel);
+		    eButton1 = new EButton(Parent);
+
+		    eButton1.setText("2:1");
+		    eButton1.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    eButton1ActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(eButton1);
-		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(eButton4);
-		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(eButton3);
-		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(LiveVideoButton);
-		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(DatarateMonitor);
-		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel1 = new javax.swing.JLabel();
-		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(ColorModeLabel1);
-		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel1.setFont(new java.awt.Font("DejaVu Sans", 0, 12)); // NOI18N
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel1.setForeground(new java.awt.Color(255, 255, 255));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel1.setText("Rec-Buffer");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    BufferMonitor = new BufferMonitor();
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(BufferMonitor);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    BufferMonitor.setBackground(java.awt.Color.black);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    BufferMonitor.setForeground(new java.awt.Color(255, 255, 255));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    javax.swing.GroupLayout gl_BufferMonitor = new javax.swing.GroupLayout(BufferMonitor);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    BufferMonitor.setLayout(gl_BufferMonitor);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    gl_BufferMonitor.setHorizontalGroup(gl_BufferMonitor.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 90,
+		    });
+		    QuickPanel.add(eButton1);
+		    QuickPanel.add(eButton4);
+		    QuickPanel.add(eButton3);
+		    QuickPanel.add(LiveVideoButton);
+		    QuickPanel.add(DatarateMonitor);
+		    ColorModeLabel1 = new javax.swing.JLabel();
+		    QuickPanel.add(ColorModeLabel1);
+
+		    ColorModeLabel1.setFont(new java.awt.Font("DejaVu Sans", 0, 12)); // NOI18N
+		    ColorModeLabel1.setForeground(new java.awt.Color(255, 255, 255));
+		    ColorModeLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+		    ColorModeLabel1.setText("Rec-Buffer");
+		    ColorModeLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		    BufferMonitor = new BufferMonitor();
+		    QuickPanel.add(BufferMonitor);
+
+		    BufferMonitor.setBackground(java.awt.Color.black);
+		    BufferMonitor.setForeground(new java.awt.Color(255, 255, 255));
+
+		    javax.swing.GroupLayout gl_BufferMonitor = new javax.swing.GroupLayout(BufferMonitor);
+		    BufferMonitor.setLayout(gl_BufferMonitor);
+		    gl_BufferMonitor.setHorizontalGroup(gl_BufferMonitor.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 90,
 			    Short.MAX_VALUE));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    gl_BufferMonitor.setVerticalGroup(gl_BufferMonitor.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 40,
+		    gl_BufferMonitor.setVerticalGroup(gl_BufferMonitor.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 40,
 			    Short.MAX_VALUE));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel = new javax.swing.JLabel();
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel.setForeground(new java.awt.Color(255, 255, 255));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel.setText("Color-Mode");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(ColorModeLabel);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(eButton9);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(eButton8);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.add(eButton6);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    QuickPanel.setBackground(Parent.Settings.GetPanelBackgroundColor());
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ScaleLabel.setForeground(Parent.Settings.GetTextColor());
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ColorModeLabel.setForeground(Parent.Settings.GetTextColor());
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    DatarateMonitor.setBackground(Parent.Settings.GetPanelBackgroundColor());
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    DatarateMonitor.setForeground(Parent.Settings.GetTextColor());
+		    ColorModeLabel = new javax.swing.JLabel();
+		    ColorModeLabel.setForeground(new java.awt.Color(255, 255, 255));
+		    ColorModeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+		    ColorModeLabel.setText("Color-Mode");
+		    ColorModeLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+		    QuickPanel.add(ColorModeLabel);
+		    QuickPanel.add(eButton9);
+		    QuickPanel.add(eButton8);
+		    QuickPanel.add(eButton6);
+		    QuickPanel.setBackground(Parent.Settings.GetPanelBackgroundColor());
+		    ScaleLabel.setForeground(Parent.Settings.GetTextColor());
+		    ColorModeLabel.setForeground(Parent.Settings.GetTextColor());
+		    DatarateMonitor.setBackground(Parent.Settings.GetPanelBackgroundColor());
+		    DatarateMonitor.setForeground(Parent.Settings.GetTextColor());
 
 		    InfoPanel.setBackground(new java.awt.Color(0, 0, 0));
 		    InfoPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -428,134 +428,133 @@ public class MainDialogVLC extends JPanel {
 		    InfoArea_Record.setFocusable(false);
 		    InfoPanel.add(InfoArea_Record);
 		    NoticeArea = new javax.swing.JTextPane();
-		    
-		    		    NoticeArea.setBackground(new java.awt.Color(0, 0, 0));
-		    		    NoticeArea.setForeground(new java.awt.Color(254, 54, 54));
-		    		    NoticeArea.setText("loading...");
-		    		    NoticeArea.setDoubleBuffered(true);
-		    		    NoticeArea.setFocusable(false);
-		    		    InfoPanel.add(NoticeArea);
-		    		    NoticeArea.setBackground(Parent.Settings.GetPanelBackgroundColor());
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel = new javax.swing.JPanel();
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ExposureButton = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    GainButton = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    histogram = new Histogram();
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    CaptureStill = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    CaptureStill.setSize(new Dimension(50, 35));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    RecordButton = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.setBackground(new java.awt.Color(0, 0, 0));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ExposureButton.setText("Shutter");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ExposureButton.setAlignmentY(0.0F);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ExposureButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ExposureButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ExposureButton.setIconTextGap(0);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ExposureButton.setMargin(new java.awt.Insets(0, 5, 0, 0));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ExposureButton.addActionListener(new java.awt.event.ActionListener() {
+
+		    NoticeArea.setBackground(new java.awt.Color(0, 0, 0));
+		    NoticeArea.setForeground(new java.awt.Color(254, 54, 54));
+		    NoticeArea.setText("loading...");
+		    NoticeArea.setDoubleBuffered(true);
+		    NoticeArea.setFocusable(false);
+		    InfoPanel.add(NoticeArea);
+		    NoticeArea.setBackground(Parent.Settings.GetPanelBackgroundColor());
+		    ParameterPanel = new javax.swing.JPanel();
+		    ExposureButton = new EButton(Parent);
+		    GainButton = new EButton(Parent);
+		    histogram = new Histogram();
+		    CaptureStill = new EButton(Parent);
+		    CaptureStill.setSize(new Dimension(50, 35));
+		    RecordButton = new EButton(Parent);
+
+		    ParameterPanel.setBackground(new java.awt.Color(0, 0, 0));
+
+		    ExposureButton.setText("Shutter");
+		    ExposureButton.setAlignmentY(0.0F);
+		    ExposureButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+		    ExposureButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+		    ExposureButton.setIconTextGap(0);
+		    ExposureButton.setMargin(new java.awt.Insets(0, 5, 0, 0));
+		    ExposureButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    ExposureButtonActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setBackground(new java.awt.Color(255, 255, 255));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setIconImage(getClass().getResource("/media/settings.png")); // NOI18N
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setPreferredSize(new Dimension(45, 45));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setToolTipText("Settings");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setAlignmentY(0.0F);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.setIconTextGap(0);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    SettingsButton.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    ParameterPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		    SettingsButton = new EButton(Parent);
+
+		    SettingsButton.setBackground(new java.awt.Color(255, 255, 255));
+		    SettingsButton.setIconImage(getClass().getResource("/media/settings.png")); // NOI18N
+		    SettingsButton.setPreferredSize(new Dimension(45, 45));
+		    SettingsButton.setToolTipText("Settings");
+		    SettingsButton.setAlignmentY(0.0F);
+		    SettingsButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		    SettingsButton.setIconTextGap(0);
+		    SettingsButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    SettingsButtonActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(SettingsButton);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(ExposureButton);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    GainButton.setText("Gain");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    GainButton.setAlignmentY(0.0F);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    GainButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    GainButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    GainButton.setIconTextGap(20);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    GainButton.setMargin(new java.awt.Insets(0, 5, 0, 0));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    GainButton.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    ParameterPanel.add(SettingsButton);
+		    ParameterPanel.add(ExposureButton);
+
+		    GainButton.setText("Gain");
+		    GainButton.setAlignmentY(0.0F);
+		    GainButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+		    GainButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+		    GainButton.setIconTextGap(20);
+		    GainButton.setMargin(new java.awt.Insets(0, 5, 0, 0));
+		    GainButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    GainButtonActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(GainButton);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    histogram.setBackground(new java.awt.Color(0, 0, 0));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    histogram.setPreferredSize(new java.awt.Dimension(256, 50));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    histogram.addMouseListener(new java.awt.event.MouseAdapter() {
+		    });
+		    ParameterPanel.add(GainButton);
+
+		    histogram.setBackground(new java.awt.Color(0, 0, 0));
+		    histogram.setPreferredSize(new java.awt.Dimension(256, 50));
+		    histogram.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseClicked(java.awt.event.MouseEvent evt) {
 			    histogramMouseClicked(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    PlaybackButton = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    PlaybackButton.setText("Playback");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    PlaybackButton.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    PlaybackButton = new EButton(Parent);
+		    PlaybackButton.setText("Playback");
+		    PlaybackButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    PlaybackButtonActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(PlaybackButton);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    AudioRec = new EButton(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    AudioRec.setText("Audio Rec");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    AudioRec.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    ParameterPanel.add(PlaybackButton);
+		    AudioRec = new EButton(Parent);
+
+		    AudioRec.setText("Audio Rec");
+		    AudioRec.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    AudioRecActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    audioMonitor1 = new AudioMonitor(Parent);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    audioMonitor1.setBackground(new java.awt.Color(0, 0, 0));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    audioMonitor1.setForeground(new java.awt.Color(166, 166, 166));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    audioMonitor1.setPreferredSize(new java.awt.Dimension(27, 60));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    javax.swing.GroupLayout gl_audioMonitor1 = new javax.swing.GroupLayout(audioMonitor1);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    audioMonitor1.setLayout(gl_audioMonitor1);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    gl_audioMonitor1.setHorizontalGroup(gl_audioMonitor1.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 18,
+		    });
+		    audioMonitor1 = new AudioMonitor(Parent);
+
+		    audioMonitor1.setBackground(new java.awt.Color(0, 0, 0));
+		    audioMonitor1.setForeground(new java.awt.Color(166, 166, 166));
+		    audioMonitor1.setPreferredSize(new java.awt.Dimension(27, 60));
+
+		    javax.swing.GroupLayout gl_audioMonitor1 = new javax.swing.GroupLayout(audioMonitor1);
+		    audioMonitor1.setLayout(gl_audioMonitor1);
+		    gl_audioMonitor1.setHorizontalGroup(gl_audioMonitor1.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 18,
 			    Short.MAX_VALUE));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    gl_audioMonitor1.setVerticalGroup(gl_audioMonitor1.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 50,
+		    gl_audioMonitor1.setVerticalGroup(gl_audioMonitor1.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 50,
 			    Short.MAX_VALUE));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(audioMonitor1);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(AudioRec);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    javax.swing.GroupLayout gl_histogram = new javax.swing.GroupLayout(histogram);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    gl_histogram.setHorizontalGroup(gl_histogram.createParallelGroup(Alignment.LEADING).addGap(0, 612, Short.MAX_VALUE));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    gl_histogram.setVerticalGroup(gl_histogram.createParallelGroup(Alignment.LEADING).addGap(0, 505, Short.MAX_VALUE));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    histogram.setLayout(gl_histogram);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(histogram);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    CaptureStill.setText("Still");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    CaptureStill.setIconTextGap(0);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    CaptureStill.setPreferredSize(new Dimension(50, 35));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    CaptureStill.addActionListener(new java.awt.event.ActionListener() {
+
+		    ParameterPanel.add(audioMonitor1);
+		    ParameterPanel.add(AudioRec);
+
+		    javax.swing.GroupLayout gl_histogram = new javax.swing.GroupLayout(histogram);
+		    gl_histogram.setHorizontalGroup(gl_histogram.createParallelGroup(Alignment.LEADING).addGap(0, 612, Short.MAX_VALUE));
+		    gl_histogram.setVerticalGroup(gl_histogram.createParallelGroup(Alignment.LEADING).addGap(0, 505, Short.MAX_VALUE));
+		    histogram.setLayout(gl_histogram);
+
+		    ParameterPanel.add(histogram);
+
+		    CaptureStill.setText("Still");
+		    CaptureStill.setIconTextGap(0);
+		    CaptureStill.setPreferredSize(new Dimension(50, 35));
+		    CaptureStill.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    CaptureStillActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(CaptureStill);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    RecordButton.setForeground(new java.awt.Color(255, 0, 0));
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    RecordButton.setText("Record");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    RecordButton.addActionListener(new java.awt.event.ActionListener() {
+		    });
+		    ParameterPanel.add(CaptureStill);
+
+		    RecordButton.setForeground(new java.awt.Color(255, 0, 0));
+		    RecordButton.setText("Record");
+		    RecordButton.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 			    RecordButtonActionPerformed(evt);
 			}
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    });
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.add(RecordButton);
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    bg.add(ParameterPanel, "cell 0 2 3 1,growx,aligny top");
-		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    		    ParameterPanel.setBackground(Parent.Settings.GetPanelBackgroundColor());
+		    });
+		    ParameterPanel.add(RecordButton);
+
+		    bg.add(ParameterPanel, "cell 0 2 3 1,growx,aligny top");
+		    ParameterPanel.setBackground(Parent.Settings.GetPanelBackgroundColor());
 		}
 	    });
 	} catch (Exception ex) {
@@ -776,11 +775,11 @@ public class MainDialogVLC extends JPanel {
     }
 
     private void PlaybackButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_PlaybackButtonActionPerformed
-	CardLayout cl = (CardLayout) (Parent.GetCardManager().getLayout());
-	cl.show(Parent.GetCardManager(), "PlaybackCard");
+	Parent.PlaybackCardLayout.Load();
 	Parent.StopVideoPlayer();
 	Guidesoverlay.SetVisibility(false);
-	Parent.PlaybackCardLayout.Load();
+	CardLayout cl = (CardLayout) (Parent.GetCardManager().getLayout());
+	cl.show(Parent.GetCardManager(), "PlaybackCard");
     }// GEN-LAST:event_PlaybackButtonActionPerformed
 
     private void eButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_eButton1ActionPerformed

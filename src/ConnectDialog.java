@@ -144,8 +144,6 @@ public class ConnectDialog extends javax.swing.JPanel {
 		    VLCButton = new EButton(Parent);
 		    VLCButton.setMaximumSize(new Dimension(80, 35));
 		    ConnectPanel.add(VLCButton, "cell 0 3,alignx left,growy");
-
-		    VLCButton.setChecked(true);
 		    VLCButton.setText("VLC");
 		    GstreamerButton = new EButton(Parent);
 		    GstreamerButton.setToolTipText("Gstreamer is still experimental  - DONT USE IT");
@@ -203,9 +201,6 @@ public class ConnectDialog extends javax.swing.JPanel {
 		    TitleBackground.add(Title, "cell 0 1,grow");
 		    Camera1IPLabel.setForeground(Parent.Settings.GetTextColor());
 		    VLCButton.setChecked(true);
-		    VLCButton.setChecked(false);
-		    GstreamerButton.setChecked(false);
-		    GstreamerButton.setChecked(true);
 		    ExitButton = new EButton(Parent);
 		    bg.add(ExitButton, "cell 0 3,alignx right");
 

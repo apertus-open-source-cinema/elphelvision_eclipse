@@ -80,7 +80,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
     NumericalInputPanelInteger NumberPanelInteger;
     IPInputDialog IPInputDialog;
     GuidesLayout GuidesPanel;
-    PlaybackLayout PlaybackCardLayout;
+    PlaybackDialog PlaybackCardLayout;
     PhotoSettingsLayout PhotoSettingsCardLayout;
     static boolean WindowDecorations = false;
     static boolean NoCameraParameter = false;
@@ -436,7 +436,7 @@ public class ElphelVision extends Panel implements ActionListener, Runnable {
 	FloatInputDialog = new FloatInputDialog(this);
 	IPInputDialog = new IPInputDialog(this);
 	GuidesPanel = new GuidesLayout(this);
-	PlaybackCardLayout = new PlaybackLayout(this);
+	PlaybackCardLayout = new PlaybackDialog(this);
 	PhotoSettingsCardLayout = new PhotoSettingsLayout(this);
 
 	CardManager.add(ConnectCardLayout, "ConnectCard");
