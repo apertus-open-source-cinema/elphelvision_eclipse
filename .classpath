@@ -10,7 +10,6 @@
 	<classpathentry kind="lib" path="dependencies/miglayout-src.zip"/>
 	<classpathentry kind="lib" path="dependencies/miglayout15-swing.jar"/>
 	<classpathentry kind="lib" path="dependencies/platform-3.2.7.jar"/>
-	<classpathentry kind="lib" path="dependencies/vlcj-1.1.5.jar"/>
 	<classpathentry kind="lib" path="dependencies/vlcj-1.2.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
